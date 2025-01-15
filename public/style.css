@@ -5,11 +5,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto Slab", serif;
-  /* background-color: #333; */
-  background-image: url("pics/back2.jpg");
+  background-color:  #081A3A;  
+  /* background-image: url("pics/back2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover; */
 }
 a {
   color: white;
@@ -31,7 +31,7 @@ ul {
 Header CSS
 -------- */
 header {
-  background-color: yellow;
+  background-color: #0E0724;
   width: 100%;
   height: 6vw;
   box-shadow: 0px 5px rgb(106, 112, 2);
@@ -60,7 +60,7 @@ nav ul {
   left: 0;
   width: 80%;
   height: 80vw;
-  background-color: rgb(195, 195, 3);
+  background-color: #0E0724;
 }
 
 .mobile-menu li {
@@ -70,9 +70,10 @@ nav ul {
 
 /* Hamburger icon */
 .hamburger {
-  font-size: 6vw;
+  font-size: 10vw;
   cursor: pointer;
-  margin-left: 2vw;
+  margin-left: 3vw;
+  color: #D3B60A;
   display: none; /* Hide by default */
 }
 
@@ -85,7 +86,7 @@ nav ul {
   font-size: 1.5vw;
   border: none;
   outline: none;
-  color: black;
+  color: #D3B60A;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -100,15 +101,16 @@ nav ul {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #0E0724;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
   z-index: 1;
 }
 
 .dropdown-content a {
   float: none;
-  color: black;
+  color: #D3B60A;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -128,7 +130,7 @@ nav a {
   text-decoration: none;
   padding: 1vw;
   font-size: 1.5vw;
-  color: black;
+  color: #D3B60A;
 }
 .avatar {
   margin-right: 1vw;
@@ -152,7 +154,7 @@ nav p {
     display: none; /* Hide the regular menu */
   }
   header {
-    height: 10vw;
+    height: 14vw;
   }
   .hamburger {
     display: block; /* Show the hamburger menu */
@@ -188,63 +190,23 @@ Home CSS
   width: 100%;
   height: auto;
   display: flex;
-  flex-direction: column;
-}
-.about {
-  margin: 0 auto;
-  width: 90%;
-  height: 400px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2vw;
-  margin-bottom: 2vw;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.intro a {
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  color: inherit;
-  text-decoration: none;
+.cvpic {
+  width: 18vw;
+  height: auto;
+  margin-left: 8vw;
 }
-.intro {
-  width: 25%;
-  height: 360px;
-  background-color: yellow;
-  border: 2px solid black;
+
+.intro{
   font-family: "Roboto Slab", serif;
-  font-size: 1rem;
-  box-shadow: #000304 4px 10px;
-  display: flex;
-  min-height: 360px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 2vw;
+  width: 38vw;
+  color: #D3B60A;
 }
 
-.intro:hover {
-  transform: scale(1.05); /* Öka storleken något */
-  box-shadow: #000304 6px 14px; /* Öka skuggan vid hover */
-  z-index: 0;
-}
-
-.intro1 {
-  margin-left: 8%;
-  margin-top: 20px;
-  flex-wrap: nowrap;
-}
-.intro2 {
-  margin-left: 6%;
-  margin-right: 6%;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-.intro3 {
-  margin-right: 8%;
-  margin-top: 20px;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-}
 
 #txt {
   font-size: 1.5rem;
@@ -272,51 +234,24 @@ div.scroll-container img {
   padding: 10px;
 }
 @media screen and (max-width: 800px) {
-  .about {
-    margin: 0 auto;
-    width: 100%;
-    height: 1300px;
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
+  
   .homediv {
     height: auto;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+    justify-content: center;
   }
   .intro {
-    width: 78%;
-    height: 360px;
-    background-color: yellow;
-    border: 2px solid black;
-    font-family: "Roboto Slab", serif;
-    font-size: 1rem;
-    box-shadow: black 4px 10px;
+    font-size: 5vw;
+    width: 100%;
   }
-  .intro1 {
+  .cvpic {
+    width: 100%;
+    height: auto;
     margin: 0 auto;
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: nowrap;
   }
-  .intro2 {
-    margin: 0 auto;
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-  }
-  .intro3 {
-    margin: 0 auto;
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-  }
+  
 }
 /*End of Home css*/
 
