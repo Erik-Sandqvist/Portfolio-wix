@@ -1,4 +1,5 @@
-<div class="middle">
+ <link rel="stylesheet" href="/oneproject.css" />
+<div class="style">
   <h1>{{project.pname}}</h1>
   <p>{{project.pdesc}}</p>
   <p>Year: {{project.pyear}}</p>
@@ -9,10 +10,11 @@
       <li>{{sname}} (Skill ID: {{sid}})</li>
     {{/each}}
   </ul>
+  <br>
   <img
     src="{{project.pimageurl}}"
     alt="Image of {{project.pname}}"
-    style="width:120px; height:auto;"
+    style="width:80%; height:auto; margin: 0 auto; display: block;"
   />
 
 </div>

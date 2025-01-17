@@ -37,13 +37,13 @@
 
           {{#if session.isLoggedIn}}
             <p id="menulogin">
-              <img
+              <a href="/profile">  <img
                 src="{{session.profilePic}}"
                 alt="Profile Picture"
                 class="avatar"
-              />
-              Hello,
-              {{session.name}}
+              /></a>
+              <a href="/profile">Hello,
+              {{session.name}}</a>
               -
               <a href="/logout">Logout</a>
             </p>

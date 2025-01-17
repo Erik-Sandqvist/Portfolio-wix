@@ -11,6 +11,20 @@
        different layouts, fonts and colors. While I enjoy exploring varied aesthetics, I place high importance
         on maintaining continuity to ensure a cohesive and professional look.</p></div>
   </div>
+  <div class="projectdivhome">
+    {{#each projects}}
+      <a href="/project/{{pid}}" class="project-itemhome" style="background-image: url('{{pimageurl}}'); background-size: cover; background-position: center;">
+        <h2>{{pname}}</h2>
+        {{pyear}}
+
+        <strong>, Type:</strong>
+        {{ptype}}
+        <p><strong>Description:</strong> {{pdesc}}</p>
+        <p><strong>Development tools:</strong> {{pdev}}</p>
+       
+      </a>
+    {{/each}}
+  </div>
 
     <div class="postdiv">
       <p class="instruction">Here you can add a message on the site</p>

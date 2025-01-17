@@ -27,6 +27,12 @@ ul {
   margin: 0 auto;
   width: 60%;
 }
+.mylogobig{
+  margin:  0 auto;
+  margin-top: 2vw;
+  display: block;
+  width: 80%;
+}
 /* --------
 Header CSS
 -------- */
@@ -196,31 +202,49 @@ Home CSS
 
 .cvpic {
   width: 18vw;
+  margin-top: 2vw;
   height: auto;
   margin-left: 8vw;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Adds a drop shadow */
 }
 
 .intro{
   font-family: "Roboto Slab", serif;
-  font-size: 2vw;
+  font-size: 1.6vw;
   width: 38vw;
   color: #D3B60A;
 }
 
-
-#txt {
-  font-size: 1.5rem;
-  color: white;
-  margin-left: 12%;
-  margin-top: 4%;
-  font-family: "Roboto Slab", serif;
-  position: relative;
+.projectdivhome {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1800px;
+  margin-top: 8vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; /* Adds space between items */
+}
+.project-itemhome {
+  display: inline-block;
+  margin: 10px; /* Adds spacing between items */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  border: 1px solid #D3B60A;
+  border-radius: 8px;
+  flex: 1 1 calc(33.333% - 20px); /* Ensures three items per row */
+  padding: 15px;
+  background-color: #20201d;
+  list-style-type: none;
+  width: calc(33.333% - 20px); /* Ensures three items per row */
+  height: 20vw;
+  text-align: center;
 }
 
-.txtinbox {
-  padding-left: 8%;
-  padding-right: 8%;
+
+.project-itemhome img {
+  width: 100%; /* Makes images responsive */
+  height: auto;
 }
+
 div.scroll-container {
   overflow: auto;
   white-space: nowrap;
@@ -261,7 +285,7 @@ CV CSS
 .aboutme {
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 8vw;
   padding-top: 8vw;
   margin: 0 auto;
   width: 80%;
@@ -275,8 +299,58 @@ CV CSS
   z-index: -1;
 }
 .highlight {
-  color: yellow;
+  color: #D3B60A;
+  font-size: 1.4vw;
 }
+.meinfo{
+font-size: 1.2vw;
+}
+
+/* Overall container styling */
+.profile-container {
+  display: flex; /* Flexbox for layout */
+  align-items: center; /* Center content vertically */
+  justify-content: flex-start; /* Align content to the left */
+  gap: 8vw; /* Space between photo and details */
+ 
+  color: #fff; /* White text color */
+  border-radius: 8px; /* Rounded corners */
+  width: 60%; /* Set width of the container */
+  margin: 20px auto; /* Center horizontally on the page */
+}
+
+/* Photo styling */
+.profile-photo img {
+  width: 20vw; /* Set fixed width for the photo */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10%; /* Circular photo */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Adds a drop shadow */
+}
+
+/* Details styling */
+.profile-details {
+  flex: 1; /* Take up remaining space */
+}
+
+.profile-details h1 {
+  margin: 0;
+  font-size: 4vw;
+  color: #ffd700; /* Gold color for the name */
+}
+
+.profile-details h2 {
+  margin: 5px 0 15px 0;
+  font-size: 3.2vw;
+  color: #ffd700; /* Gold color for job title */
+}
+
+.profile-details p {
+  margin: 5px 0;
+  font-size: 1.2vw;
+}
+
+
+
 @media screen and (max-width: 800px) {
   .aboutme {
     display: flex;
@@ -297,7 +371,7 @@ Projects CSS
 .projectdiv {
   color: white;
   margin: 0 auto !important;
-  width: 80%;
+  width: 70%;
   margin-top: 8vw;
 }
 .project-item {
@@ -334,7 +408,7 @@ Projects CSS
   padding-top: 1vw;
 }
 .delete {
-  margin-left: 44vw;
+  margin-left: 28vw;
 }
 .addprojectform {
   width: 60%;
