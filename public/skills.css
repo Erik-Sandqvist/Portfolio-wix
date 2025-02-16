@@ -1,0 +1,44 @@
+/* --------
+Skills CSS
+-------- */
+.skillsdiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2vw;
+  }
+  .skillscard {
+    flex: 1 1 calc(26.333% - 10px);
+    box-sizing: border-box;
+    width: 20vw;
+    height: 8vw;
+    background-color: #010005;
+    border: solid yellow 2px;
+    border-radius: 2px;
+    margin-top: 10px;
+    list-style-type: none;
+    margin: 2vw;
+    padding: 1vw;
+    text-align: center;
+  }
+ 
+  @media screen and (max-width: 800px) {
+    .skillsdiv {
+       margin-top: 8vw;
+       display: flex;
+       flex-direction: column;
+      }
+    .skillscard {
+      font-size: 3vw;
+      min-height: 20vw;
+      max-height: 26vw;
+     width: 60vw;
+     margin: 0 auto;
+     margin-top: 6vw;
+    
+    }
+  }
+  /*End of skills css*/

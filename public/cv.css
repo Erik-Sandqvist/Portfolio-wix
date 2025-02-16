@@ -1,0 +1,85 @@
+.aboutme {
+  display: flex;
+  flex-direction: row;
+  gap: 8vw;
+  padding-top: 8vw;
+  margin: 0 auto;
+  width: 80%;
+  color: white;
+}
+.aboutpic {
+  width: 44vw;
+  height: 30vw;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
+.highlight {
+  color: #D3B60A;
+  font-size: 1.4vw;
+}
+.meinfo{
+font-size: 1.2vw;
+}
+
+/* Overall container styling */
+.profile-container {
+  display: flex; /* Flexbox for layout */
+  align-items: center; /* Center content vertically */
+  justify-content: flex-start; /* Align content to the left */
+  gap: 8vw; /* Space between photo and details */
+ 
+  color: #fff; /* White text color */
+  border-radius: 8px; /* Rounded corners */
+  width: 60%; /* Set width of the container */
+  margin: 20px auto; /* Center horizontally on the page */
+}
+
+/* Photo styling */
+.profile-photo img {
+  width: 20vw; /* Set fixed width for the photo */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10%; /* Circular photo */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Adds a drop shadow */
+}
+
+/* Details styling */
+.profile-details {
+  flex: 1; /* Take up remaining space */
+}
+
+.profile-details h1 {
+  margin: 0;
+  font-size: 4vw;
+  color: #ffd700; /* Gold color for the name */
+}
+
+.profile-details h2 {
+  margin: 5px 0 15px 0;
+  font-size: 3.2vw;
+  color: #ffd700; /* Gold color for job title */
+}
+
+.profile-details p {
+  margin: 5px 0;
+  font-size: 1.2vw;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .profile-container {
+   margin-top: 10vw;
+  }
+  .aboutme {
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutpic {
+    width: 44vw;
+    height: 50vw;
+    margin: 0 auto;
+    position: static;
+  }
+}
+/*End of about css*/
