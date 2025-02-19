@@ -1,36 +1,30 @@
 <body>
-  <br /><br /><br />
-   {{#if session.isAdmin}}
-      <a class="addp" href="/project-new">Add a project</a>
-  {{else}}
-    <p class="addp">Admin can add new projects</p>
-  {{/if}}
+  <br />
+  <p class="projectsheading">Projects</p>
   <div class="projectdiv">
-   <ul>
-  {{#each projects}}
-    <li class="project-item">
-      <a href="/project/{{pid}}">
-        <h2>{{pname}}</h2>
-        {{pyear}}
+    {{#each projects}}
+      <div class="project-item">
+        <a href="/project/{{pid}}">
+          <h2>{{pname}}</h2>
+          {{pyear}}
 
-        <strong>, Type:</strong>
-        {{ptype}}
-        <p><strong>Description:</strong> {{pdesc}}</p>
-        <p><strong>Development tools:</strong> {{pdev}}</p>
+          <strong>, Type:</strong>
+          {{ptype}}
+          <p><strong>Description:</strong> {{pdesc}}</p>
+          <p><strong>Development tools:</strong> {{pdev}}</p>
           <p><strong>Details... :</strong></p>
-        <img
-          src="{{pimageurl}}"
-          alt="Image of {{pname}}"
-          style="width:10vw; height:auto;"
-        />
-      </a>
-      {{#if ../session.isAdmin}}          
-        <a class="delete" href="/project/delete/{{pid}}">Delete</a>
-         <a class="modify" href="/project/modify/{{pid}}">Modify</a>
-      {{/if}}
-    </li>
-  {{/each}}
-</ul>
+          <img
+            src="{{pimageurl}}"
+            alt="Image of {{pname}}"
+            style="width:10vw; height:auto;"
+          />
+        </a>
+        {{#if ../session.isAdmin}}          
+          <a class="delete" href="/project/delete/{{pid}}">Delete</a>
+          <a class="modify" href="/project/modify/{{pid}}">Modify</a>
+        {{/if}}
+      </div>
+    {{/each}}
   </div>
 
   <!-- Pagination Controls -->
@@ -52,4 +46,9 @@
     {{/if}}
   </div>
   
+   {{#if session.isAdmin}}
+      <a class="addp" href="/project-new">Add a project</a>
+  {{else}}
+    <p class="addp">Admin can add new projects</p>
+  {{/if}}
 </body>
